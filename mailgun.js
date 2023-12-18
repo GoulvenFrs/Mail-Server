@@ -30,7 +30,7 @@ app.post('/api/email', (req, res) => {
     .messages()
     .send(
       {
-        from: 'Fillgood <postmaster@fillgood.io>',
+        from: 'Fillgood <postmaster@mg.fillgood.io>',
         to: `${email}`,
         subject: `${subject}`,
         html: `<p>${message}</p>`,
