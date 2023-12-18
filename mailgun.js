@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 const mg = require('mailgun-js');
 
 const corsOptions = {
-    origin: ["http://localhost:19006","https://dev-app-goulvenfrs.vercel.app","https://dev-app-nu.vercel.app","https://app.fillgood.io","https://fillgood.io"],
+    origin: ["http://localhost:19006","https://dev-app-goulvenfrs.vercel.app","https://dev-app-nu.vercel.app","https://app.fillgood.io","https://fillgood.io","https://mg.fillgood.io","https://mail.mg.fillgood.io","https://mail.fillgood.io"],
   };
 
 dotenv.config();
