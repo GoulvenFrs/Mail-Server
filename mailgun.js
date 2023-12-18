@@ -26,7 +26,7 @@ app.post('/api/email', (req, res) => {
     .messages()
     .send(
       {
-        from: 'Fillgood <postmaster@mg.fillgood.io>',
+        from: 'Fillgood <postmaster@fillgood.io>',
         to: `${email}`,
         subject: `${subject}`,
         html: `<p>${message}</p>`,
@@ -34,7 +34,7 @@ app.post('/api/email', (req, res) => {
       (error, body) => {
         if (error) {
           console.log(error);
-          res.status(500).send({ message: 'Error in sending email' });
+          res.status(500).send({ message: "Error in sending email : "+{error} });
         } else {
           console.log(body);
           res.send({ message: 'Email sent successfully' });
