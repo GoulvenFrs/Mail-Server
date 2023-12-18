@@ -55,7 +55,7 @@ app.post('/send-email', async (req, res) => {
     // Paramètres pour la connexion SMTP avec Mailgun
     const transporter = nodemailer.createTransport({
       service:  'Mailgun',
-      host: 'smtp.eu.mailgun.org',
+      host: 'smtp.mailgun.org',
       port: 587,
       /* secure: false, */
       auth: {
