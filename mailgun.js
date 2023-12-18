@@ -56,14 +56,14 @@ app.post('/send-email', async (req, res) => {
     const transporter = nodemailer.createTransport({
       host: 'smtp.mailgun.org',
       port: 587,
-      /* secure: true, */
+      secure: true,
       auth: {
         user: 'postmaster@mg.fillgood.io', // Remplacez par votre nom d'utilisateur SMTP Mailgun
         pass: '40dd24c5d3ea8dba8da3c649e639f356-07f37fca-28979945', // Remplacez par votre mot de passe SMTP Mailgun
       },            
-/*       tls:{
+      tls:{
         rejectUnauthorized: false
-      } */
+      }
     });
 
     // Récupérer les informations de l'email depuis la requête
