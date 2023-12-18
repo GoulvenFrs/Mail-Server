@@ -59,8 +59,8 @@ app.post('/send-email', async (req, res) => {
       port: 587,
       /* secure: false, */
       auth: {
-        user: 'postmaster@mg.fillgood.io', // Remplacez par votre nom d'utilisateur SMTP Mailgun
-        pass: 'ff69bf0e80ccd35f1ca41b2e77d1c89c-5e3f36f5-7f85f360', // Remplacez par votre mot de passe SMTP Mailgun
+        user: process.env.MAILGUN_SMTP_MAIL, // Remplacez par votre nom d'utilisateur SMTP Mailgun
+        pass: process.env.MAILGUN_SMTP_PASS, // Remplacez par votre mot de passe SMTP Mailgun
       },            
 /*       tls:{
         rejectUnauthorized: false
