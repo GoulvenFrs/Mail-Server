@@ -34,7 +34,8 @@ app.post('/api/email', (req, res) => {
       (error, body) => {
         if (error) {
           console.log(error);
-          res.status(500).send({ message: "Error in sending email : "+{error} });
+          let err =JSON.stringify(error)
+          res.status(500).send({ message: "Error in sending email : "+{err} });
         } else {
           console.log(body);
           res.send({ message: 'Email sent successfully' });
