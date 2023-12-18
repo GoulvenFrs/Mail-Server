@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors(corsOptions));
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('MailGun server')
 })
 
 app.post('/api/email', (req, res) => {
